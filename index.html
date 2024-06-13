@@ -1,123 +1,366 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Wars - Malhada</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
+    <!-- Bootstrap CSS v5.2.1 -->
     <link
-      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
 
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body,
-      html {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      .main {
-        display: flex;
-        flex-direction: column;
-        min-height: 83vh;
-      }
-      h1 {
-        background-color: rgb(117, 185, 240);
-        color: beige;
-        padding: 1.2rem;
-        text-align: center;
-      }
-      .formulario {
-        max-width: 350px;
-        margin: 0 auto;
-        padding: 2rem;
+      .card {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        transition: box-shadow 0.3s ease;
       }
 
-      button {
-        margin-top: 1.3rem;
-        cursor: pointer;
-      }
-
-      input {
-        margin-bottom: 1rem;
-      }
-      footer {
-        color: rgb(0, 0, 0);
-        font-size: 12px;
-        text-align: center;
-        padding: 8px;
-        margin-top: 50px;
-        height: 70px;
+      .card:hover {
+        box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.5);
       }
     </style>
-
-    <title>Página HTML de formulário</title>
   </head>
+
   <body>
-    <header>
-      <h1>Formulário</h1>
+    <header class="bg-light text-white py-4 fixed-top">
+      <div class="container text-center">
+        <h1 class="text-secondary display-4 mb-0">Star Wars</h1>
+      </div>
     </header>
-    <main>
-      <div class="formulario main">
-        <h2>Entre em contato</h2>
-        <div>
-          <form action="">
-            <label class="form-label" for="name">Nome:</label>
-            <input
-              class="form-control"
-              title="Digite seu nome."
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Ex. Henrique"
-            />
-
-            <label class="form-label" for="email">E-mail:</label>
-            <input
-              class="form-control"
-              title="Digite seu e-mail."
-              type="email"
-              name="emal"
-              id="email"
-              placeholder="seu@email.com.br"
-            />
-
-            <label class="form-label" for="tel">Telefone:</label>
-            <input
-              class="form-control"
-              title="Digite seu telefone"
-              type="tel"
-              name="tel"
-              id="tel"
-              placeholder="(11) 9.1111-1111"
-            />
-
-            <label class="form-label" for="mensagem">Mensagem:</label>
-            <textarea
-              class="form-control"
-              title="Comece a escrever sua mensagem."
-              name="mensagem"
-              id="mensagem"
-              placeholder="Deixe-nos uma mensagem"
-            ></textarea>
-          </form>
-          <button class="btn btn-primary disabled" type="submit">Enviar</button>
+    <div class="container center-content">
+      <div class="row justify-content-center">
+        <div class="col">
+          <main>
+            <!-- Carousel -->
+            <section class="pb-4">
+              <!-- Título do Carousel -->
+              <h2 class="h4">Carousel de Imagens</h2>
+              <!-- Início do Carousel -->
+              <div
+                id="carouselExampleCaptions"
+                class="carousel slide carousel-fade"
+                data-bs-ride="carousel"
+                data-bs-interval="3000"
+              >
+                <!-- Indicadores do Carousel -->
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                </div>
+                <!-- Slides do Carousel -->
+                <div class="carousel-inner">
+                  <!-- Primeiro Slide -->
+                  <div class="carousel-item active">
+                    <img
+                      src="https://cdn.pixabay.com/photo/2017/07/25/22/54/lego-2539844_1280.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>O Legado da Força</h5>
+                      <p>Em meio a um cenário de conflitos intergalácticos.</p>
+                    </div>
+                  </div>
+                  <!-- Segundo Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="https://cdn.pixabay.com/photo/2016/03/27/07/26/darth-vader-1282288_1280.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>A Força está com você</h5>
+                      <p>
+                        Os corajosos Jedi, mestres da Força, lutam contra os
+                        Sith.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Terceiro Slide -->
+                  <div class="carousel-item">
+                    <img
+                      src="https://cdn.pixabay.com/photo/2017/03/25/07/03/star-wars-2172953_1280.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Explorando os Confins da Galáxia</h5>
+                      <p>
+                        Neste universo de batalhas intergalácticas, aventuras
+                        emocionantes e personagens icônicos.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Controles do Carousel -->
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </section>
+          </main>
         </div>
       </div>
-    </main>
+    </div>
 
-    <!-- Rodapé -->
-    <footer>
-      <p>2024 &copy; Todo os direitos reservados</p>
-      <p>Desenvolvido por Luiz Henrique</p>
+    <section class="center-content">
+      <!-- Layout com Grid -->
+      <div class="container">
+        <div class="row justify-content-center">
+          <!-- Card 1 -->
+          <div
+            id="cardefeito"
+            class="card col-lg-4 col-md-6 col-sm-12 p-4 card mb-3 bg-success"
+            style="max-width: 432px"
+          >
+            <!-- Card content -->
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  src="https://cdn.pixabay.com/photo/2013/07/12/13/25/darth-vader-147014_1280.png"
+                  class="img-fluid rounded-start"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title text-center">A Força está com você</h5>
+                  <p class="card-text">
+                    Em uma galáxia muito, muito distante, as forças do bem e do
+                    mal se enfrentam em uma luta épica pelo destino da galáxia.
+                    Os corajosos Jedi, mestres da Força, lutam contra os Sith,
+                    que buscam dominar a galáxia com o poder do lado negro.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="col-lg-4 col-md-6 col-sm-12 p-4 card mb-3 bg-primary"
+            style="max-width: 432px"
+          >
+            <!-- Card content -->
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  src="https://cdn.pixabay.com/photo/2016/01/02/16/39/darth-vader-1118454_1280.png"
+                  class="img-fluid rounded-start"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title text-center">
+                    Que a Força esteja com você
+                  </h5>
+                  <p class="card-text">
+                    Os Jedi, com sua sabedoria e disciplina, buscam manter o
+                    equilíbrio na Força e proteger os inocentes. Os Sith,
+                    seduzidos pelo poder e pela ambição, buscam o controle
+                    absoluto sobre a galáxia.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="col-lg-4 col-md-6 col-sm-12 p-4 card mb-3 bg-info"
+            style="max-width: 432px"
+          >
+            <!-- Card content -->
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  src="https://cdn.pixabay.com/photo/2019/07/21/23/27/pilot-must-4353820_1280.png"
+                  class="img-fluid rounded-start"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title text-center">
+                    Explorando os Confins da Galáxia
+                  </h5>
+                  <p class="card-text">
+                    Neste universo de batalhas intergalácticas, aventuras
+                    emocionantes e personagens icônicos, a saga de Star Wars
+                    continua a cativar e inspirar gerações de fãs em todo o
+                    mundo.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div
+            class="col-lg-4 col-md-6 col-sm-12 p-4 card mb-3 bg-warning"
+            style="max-width: 432px"
+          >
+            <!-- Card content -->
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  src="https://cdn.pixabay.com/photo/2016/01/02/16/00/star-wars-1118389_1280.png"
+                  class="img-fluid rounded-start"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title text-center">
+                    Aventuras Intergalácticas
+                  </h5>
+                  <p class="card-text">
+                    Em um universo repleto de batalhas épicas, encontros
+                    emocionantes e personagens lendários, a saga de Star Wars
+                    continua a fascinar e inspirar admiradores de todas as
+                    idades em todo o mundo.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div
+            class="col-lg-4 col-md-6 col-sm-12 p-4 card mb-3 bg-danger"
+            style="max-width: 432px"
+          >
+            <!-- Card content -->
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  src="https://cdn.pixabay.com/photo/2022/06/04/20/20/r2-d2-7242774_1280.png"
+                  class="img-fluid rounded-start"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title text-center">O Legado da Força</h5>
+                  <p class="card-text">
+                    Em meio a um cenário de conflitos intergalácticos,
+                    reviravoltas surpreendentes e figuras lendárias, a saga de
+                    Star Wars mantém sua capacidade de cativar e inspirar
+                    inúmeras gerações de fãs em todo o mundo.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div
+            class="col-lg-4 col-md-6 col-sm-12 p-4 card mb-3 bg-secondary"
+            style="max-width: 432px"
+          >
+            <!-- Card content -->
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  src="https://cdn.pixabay.com/photo/2021/06/08/16/54/darth-vader-6321111_960_720.png"
+                  class="img-fluid rounded-start"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Em Busca da Liberdade</h5>
+                  <p class="card-text">
+                    Em um vasto universo de confrontos intergalácticos,
+                    narrativas emocionantes e personagens emblemáticos, a saga
+                    de Star Wars continua a encantar e inspirar fãs de todas as
+                    idades ao redor do globo.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4 fixed-bottom">
+      <div class="container text-center">
+        <p class="mb-0">
+          Site criado por Luiz Henrique Santos para fins acadêmicos
+        </p>
+      </div>
     </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
